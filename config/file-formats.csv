@@ -1,0 +1,6 @@
+﻿Prefix,Delimiter,DateFormat,Culture
+batch_a_,",",yyyy-MM-dd,en-US
+batch_b_,",",MM/dd/yyyy,en-US
+batch_c_,;,dd/MM/yyyy,en-US
+batch_d_,",",yyyy-MM-dd,en-US
+batch_e_,",",yyyy-MM-dd,en-US

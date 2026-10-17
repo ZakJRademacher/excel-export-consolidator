@@ -1,0 +1,19 @@
+{
+  "stage": "baseline",
+  "metrics": {
+    "files": 5,
+    "input_rows": 309,
+    "clean_rows": 291,
+    "review_rows": 10,
+    "repeated_rows": 8,
+    "file_issues": 0,
+    "clean_sales": "57507.7198"
+  },
+  "accepted_fields_and_lineage_match": true,
+  "review_status_and_lineage_match": true,
+  "per_file_counts_match": true,
+  "summary_cached_values_match": true,
+  "formula_errors": [],
+  "worksheet_query_tables": 3,
+  "workbook_sha256": "cd7bdc32e7f898cdf4b4442a703fc631f4adf126967de01634c8fdf56765fd99"
+}

@@ -1,0 +1,77 @@
+{
+  "source": "https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting",
+  "source_partition": "sales_2018-12.csv",
+  "partition_sha256": "449abd845bed4dfa9f9398f839f393144c1eb015a03ca105bfc74f6ca2a2fb91",
+  "sample": "First 300 data rows, original order",
+  "changes": [
+    {
+      "source_row_id": "405",
+      "change": "Missing RowID"
+    },
+    {
+      "source_row_id": "406",
+      "change": "Invalid sales"
+    },
+    {
+      "source_row_id": "407",
+      "change": "Invalid date"
+    },
+    {
+      "source_row_id": "408",
+      "change": "Unknown category"
+    },
+    {
+      "source_row_id": "409",
+      "change": "Missing region"
+    },
+    {
+      "source_row_id": "410",
+      "change": "Ship before order"
+    },
+    {
+      "source_row_id": "411",
+      "change": "Missing OrderID"
+    },
+    {
+      "source_row_id": "412",
+      "change": "Missing ProductID"
+    },
+    {
+      "source_row_id": "76",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "77",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "78",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "111",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "145",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "204",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "206",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "207",
+      "change": "Added exact repeat to batch e"
+    },
+    {
+      "source_row_id": "210",
+      "change": "Added conflicting amount; both copies must be reviewed"
+    }
+  ],
+  "note": "Controlled export variants and seeded defects, not observed business errors or client results."
+}

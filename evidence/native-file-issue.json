@@ -1,0 +1,19 @@
+{
+  "stage": "file-issue",
+  "metrics": {
+    "files": 7,
+    "input_rows": 310,
+    "clean_rows": 292,
+    "review_rows": 10,
+    "repeated_rows": 8,
+    "file_issues": 1,
+    "clean_sales": "57522.6718"
+  },
+  "accepted_fields_and_lineage_match": true,
+  "review_status_and_lineage_match": true,
+  "per_file_counts_match": true,
+  "summary_cached_values_match": true,
+  "formula_errors": [],
+  "worksheet_query_tables": 3,
+  "workbook_sha256": "0c90e9109143f0b3cc20f42c19306498b174c8ff3076e53ca46fc933cf03da9f"
+}

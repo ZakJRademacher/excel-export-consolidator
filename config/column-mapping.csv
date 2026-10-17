@@ -1,0 +1,25 @@
+﻿Alias,Canonical
+RowID,RowID
+OrderID,OrderID
+OrderDate,OrderDate
+ShipDate,ShipDate
+Category,Category
+Region,Region
+ProductID,ProductID
+Sales,Sales
+Line ID,RowID
+Order Ref,OrderID
+Placed On,OrderDate
+Shipped On,ShipDate
+Product Group,Category
+Sales Region,Region
+SKU,ProductID
+Sales Amount,Sales
+record_id,RowID
+order,OrderID
+order_dt,OrderDate
+ship_dt,ShipDate
+dept,Category
+territory,Region
+item_code,ProductID
+amount,Sales

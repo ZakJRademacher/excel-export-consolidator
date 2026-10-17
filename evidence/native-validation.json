@@ -1,0 +1,106 @@
+{
+  "validated_on": "2026-10-17",
+  "application": "Microsoft Excel Desktop for Windows",
+  "method": "Native Refresh All, wait for all output queries, save, then read-only saved-XLSX comparison against current input CSVs",
+  "stages": [
+    {
+      "stage": "baseline",
+      "metrics": {
+        "files": 5,
+        "input_rows": 309,
+        "clean_rows": 291,
+        "review_rows": 10,
+        "repeated_rows": 8,
+        "file_issues": 0,
+        "clean_sales": "57507.7198"
+      },
+      "accepted_fields_and_lineage_match": true,
+      "review_status_and_lineage_match": true,
+      "per_file_counts_match": true,
+      "summary_cached_values_match": true,
+      "formula_errors": [],
+      "worksheet_query_tables": 3,
+      "workbook_sha256": "cd7bdc32e7f898cdf4b4442a703fc631f4adf126967de01634c8fdf56765fd99"
+    },
+    {
+      "stage": "added-file",
+      "metrics": {
+        "files": 6,
+        "input_rows": 310,
+        "clean_rows": 292,
+        "review_rows": 10,
+        "repeated_rows": 8,
+        "file_issues": 0,
+        "clean_sales": "57522.6718"
+      },
+      "accepted_fields_and_lineage_match": true,
+      "review_status_and_lineage_match": true,
+      "per_file_counts_match": true,
+      "summary_cached_values_match": true,
+      "formula_errors": [],
+      "worksheet_query_tables": 3,
+      "workbook_sha256": "ee8a234f81ed5f27e759af4733d27ca9f5ef0e6a290675488d64eba070e7753f"
+    },
+    {
+      "stage": "unchanged-repeat",
+      "metrics": {
+        "files": 6,
+        "input_rows": 310,
+        "clean_rows": 292,
+        "review_rows": 10,
+        "repeated_rows": 8,
+        "file_issues": 0,
+        "clean_sales": "57522.6718"
+      },
+      "accepted_fields_and_lineage_match": true,
+      "review_status_and_lineage_match": true,
+      "per_file_counts_match": true,
+      "summary_cached_values_match": true,
+      "formula_errors": [],
+      "worksheet_query_tables": 3,
+      "workbook_sha256": "5e55138a77344e96a904d3c25c07ef21c99a4c3f47fd52dfc812cd44ccd40170"
+    },
+    {
+      "stage": "file-issue",
+      "metrics": {
+        "files": 7,
+        "input_rows": 310,
+        "clean_rows": 292,
+        "review_rows": 10,
+        "repeated_rows": 8,
+        "file_issues": 1,
+        "clean_sales": "57522.6718"
+      },
+      "accepted_fields_and_lineage_match": true,
+      "review_status_and_lineage_match": true,
+      "per_file_counts_match": true,
+      "summary_cached_values_match": true,
+      "formula_errors": [],
+      "worksheet_query_tables": 3,
+      "workbook_sha256": "0c90e9109143f0b3cc20f42c19306498b174c8ff3076e53ca46fc933cf03da9f"
+    },
+    {
+      "stage": "restored",
+      "metrics": {
+        "files": 5,
+        "input_rows": 309,
+        "clean_rows": 291,
+        "review_rows": 10,
+        "repeated_rows": 8,
+        "file_issues": 0,
+        "clean_sales": "57507.7198"
+      },
+      "accepted_fields_and_lineage_match": true,
+      "review_status_and_lineage_match": true,
+      "per_file_counts_match": true,
+      "summary_cached_values_match": true,
+      "formula_errors": [],
+      "worksheet_query_tables": 3,
+      "workbook_sha256": "b81f6b078b5fc626daea1f6137f59b7f038a9f8257cce386d7a79d041a7b0f88"
+    }
+  ],
+  "final_workbook_sha256": "b81f6b078b5fc626daea1f6137f59b7f038a9f8257cce386d7a79d041a7b0f88",
+  "delivered_state": "Restored five-file baseline; Summary active",
+  "known_limits": "See docs/QA.md and docs/TECHNICAL.md",
+  "repair_note": "Forced per-file table evaluation within M try scope; file-issue and restored stages use the corrected query."
+}
