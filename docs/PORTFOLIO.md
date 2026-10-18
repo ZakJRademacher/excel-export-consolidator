@@ -1,14 +1,16 @@
-# Portfolio walkthrough
+# Portfolio listing
 
-## Suggested title
+Title: Excel CSV Consolidation | Power Query Cleanup & Refresh
 
-CSV Export Cleanup and Consolidation in Excel Power Query
+Role: Excel Power Query workflow development
 
-## Description
+Description: Combine recurring CSV exports into a refreshable Excel master, correction queue and file-level summary. Power Query standardizes configured headers and dates, flags conflicting IDs and keeps source traceability. The sample reconciles 309 records into 291 accepted, 10 corrections and 8 skipped repeats. Includes the workbook, sample files, refresh guide and independent Python checks; added-file and repeat refresh were tested in Excel. Independent project using historical data and disclosed test defects.
 
-A refreshable Excel workflow that combines five differently formatted sales exports, standardizes known column names and dates, validates records, and separates usable data from corrections and duplicate copies. The sample contains 309 input records, producing 291 accepted records, 10 corrections, and 8 skipped repeats. Each result includes source lineage, while the summary and per-file totals explain what was loaded. Includes Power Query source, an independent Python reference, tests, source attribution, and operator documentation.
+Skills: Microsoft Excel; Power Query; Data Cleaning; Python.
 
-Historical data is public Kaggle data with disclosed seeded defects. No client outcomes are claimed.
+Repository: https://github.com/ZakJRademacher/excel-export-consolidator
+
+Previews: Existing native application screenshots and linked deliverables. See the repository overview for scope, source attribution and refresh instructions.
 
 ## A three-minute demonstration
 
