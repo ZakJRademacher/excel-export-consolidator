@@ -36,3 +36,5 @@ Do not claim arbitrary-input equivalence from matching the sample. Test any new 
 
 No macros, background web service, scheduled task, or Python installation are required for normal Excel use. Refresh is initiated by the workbook user.
 
+
+Workbook authoring also uses Python 3.10+ for display-only theme metadata normalization. Set `PYTHON` to its executable if `python` is unavailable. This helper preserves native workbook parts and does not recalculate formulas.

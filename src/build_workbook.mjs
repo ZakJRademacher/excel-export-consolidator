@@ -1,3 +1,4 @@
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -116,5 +117,6 @@ for(const [name,range] of [['Summary','B2:H32'],['Start here','B2:H43'],['Clean 
  await fs.writeFile(path.join(root,'evidence',name.toLowerCase().replaceAll(' ','-')+'.png'),new Uint8Array(await preview.arrayBuffer()));
 }
 const file=await SpreadsheetFile.exportXlsx(wb);await file.save(path.join(output,'Export Consolidator.xlsx'));
+execFileSync(process.env.PYTHON || 'python', [path.join(root,'src/normalize_workbook.py'), path.join(output,'Export Consolidator.xlsx')]);
 console.log(JSON.stringify({file:path.join(output,'Export Consolidator.xlsx'),metrics:result.metrics}));
 
