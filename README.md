@@ -1,5 +1,7 @@
 # Excel Export Consolidator
 
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square) ![Power Query](https://img.shields.io/badge/Power%20Query-356859?style=flat-square) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square)
+
 **How can differently formatted recurring exports become one usable Excel master?**
 
 A macro-free **Excel Power Query** workflow that combines CSV files, standardizes known headers and dates, and separates accepted records from corrections.
