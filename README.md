@@ -43,6 +43,8 @@ Native Excel checks confirmed that adding a file changed accepted rows from **29
 
 ## Scope
 
+For task-configurable consolidation and validation across other CSV schemas, use the companion [reusable CSV workbench](https://github.com/ZakJRademacher/cloud-file-intake/blob/main/docs/WORKBENCH.md). Its setup screen saves field rules and source-format mappings, supports exact decimal line amounts, and checks keys across a whole batch. This native Excel template retains its documented eight-field contract.
+
 Independent portfolio demonstration using historical Kaggle Superstore values with disclosed export variations and seeded defects. Client adaptation requires agreed mappings, formats, keys and validation rules. No client savings are claimed, and the source does not establish a currency.
 
 Code/documentation: [MIT](LICENSE). Dataset-derived files retain the source's GPL 2 label; see [data attribution](licenses/DATA.md).
