@@ -1,5 +1,7 @@
 # Excel Export Consolidator
 
+> **Featured replacement:** [Data Workbench 2.0.0](https://github.com/ZakJRademacher/data-workbench) now covers the verified CSV/Excel preparation workflow with saved rules, review decisions and guarded joins. See the [comparison and benchmark findings](https://github.com/ZakJRademacher/data-workbench/blob/main/docs/COMPARISON.md). This repository preserves the original native Power Query workbook, samples, history and download links.
+
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square) ![Power Query](https://img.shields.io/badge/Power%20Query-356859?style=flat-square) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square)
 
 **How can differently formatted recurring exports become one usable Excel master?**
