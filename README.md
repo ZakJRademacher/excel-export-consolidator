@@ -1,16 +1,14 @@
 # Excel Export Consolidator
 
-> **Featured replacement:** [Data Workbench 2.0.0](https://github.com/ZakJRademacher/data-workbench) now covers the verified CSV/Excel preparation workflow with saved rules, review decisions and guarded joins. See the [comparison and benchmark findings](https://github.com/ZakJRademacher/data-workbench/blob/main/docs/COMPARISON.md). This repository preserves the original native Power Query workbook, samples, history and download links.
+**How can recurring exports in known formats become one trustworthy Excel master?**
 
-![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square) ![Power Query](https://img.shields.io/badge/Power%20Query-356859?style=flat-square) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square)
+The native **Excel / Power Query** sample reconciles **309 input records = 291 accepted + 10 corrections + eight skipped repeats**, with **57,507.7198** accepted source monetary units. Text IDs, exact source references and correction reasons stay visible.
 
-**How can differently formatted recurring exports become one usable Excel master?**
+[View native summary](evidence/native-summary.jpg) · [Download workbook](deliverables/Export%20Consolidator.xlsx) · [Refresh guide](docs/REFRESH_GUIDE.md) · [Power Query source](power-query) · [Independent practice](docs/INDEPENDENT_PRACTICE.md)
 
-A macro-free **Excel Power Query** workflow that combines CSV files, standardizes known headers and dates, and separates accepted records from corrections.
+![Native Excel summary from the documented sample refresh](evidence/native-summary.jpg)
 
-![Excel summary after native refresh](evidence/native-summary.jpg)
-
-[Download the workbook](deliverables/Export%20Consolidator.xlsx) · [Refresh guide](docs/REFRESH_GUIDE.md) · [Correction queue preview](evidence/native-review.jpg)
+Use this macro-free workbook for the documented eight-field sales contract inside Excel Desktop. [Data Workbench](https://github.com/ZakJRademacher/data-workbench) is the separate configurable local CSV/XLSX application; it requires Python and does not replace this native Power Query skill example. [Verified compatibility and limits](https://github.com/ZakJRademacher/data-workbench/blob/main/docs/COMPARISON.md).
 
 ## What it delivers
 
@@ -45,7 +43,7 @@ Native Excel checks confirmed that adding a file changed accepted rows from **29
 
 ## Scope
 
-For task-configurable consolidation and validation across other CSV schemas, use the companion [reusable CSV workbench](https://github.com/ZakJRademacher/cloud-file-intake/blob/main/docs/WORKBENCH.md). Its setup screen saves field rules and source-format mappings, supports exact decimal line amounts, and checks keys across a whole batch. This native Excel template retains its documented eight-field contract.
+For configurable multi-table CSV/XLSX preparation, use [Data Workbench](https://github.com/ZakJRademacher/data-workbench). The [earlier local CSV workbench](https://github.com/ZakJRademacher/cloud-file-intake/blob/main/docs/WORKBENCH.md) remains preserved separately. This native Excel template retains its documented eight-field contract; no automatic handoff between different project schemas is implied.
 
 Independent portfolio demonstration using historical Kaggle Superstore values with disclosed export variations and seeded defects. Client adaptation requires agreed mappings, formats, keys and validation rules. No client savings are claimed, and the source does not establish a currency.
 
