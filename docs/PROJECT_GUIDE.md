@@ -2,7 +2,7 @@
 
 [Back to project overview](../README.md)
 
-Run commands from the repository root. Paths in command examples are relative to that root.
+Routine use happens inside Excel. Python is only needed to recreate the sample or run the independent reference below. Run those commands from the repository root.
 
 ## Weekly use
 

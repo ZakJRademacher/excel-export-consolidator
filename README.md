@@ -1,50 +1,44 @@
 # Excel Export Consolidator
 
-**How can recurring exports in known formats become one trustworthy Excel master?**
+This workbook combines recurring CSV exports into one Excel master and keeps records that need attention in a separate review table. The goal is a refresh someone can repeat without copying and pasting files together each time.
 
-The native **Excel / Power Query** sample reconciles **309 input records = 291 accepted + 10 corrections + eight skipped repeats**, with **57,507.7198** accepted source monetary units. Text IDs, exact source references and correction reasons stay visible.
+**Power Query runs the workflow inside Excel.** Python provides an independent reference for checking the results; it isn't required to use the workbook.
 
-[View native summary](evidence/native-summary.jpg) · [Download workbook](deliverables/Export%20Consolidator.xlsx) · [Refresh guide](docs/REFRESH_GUIDE.md) · [Power Query source](power-query) · [Independent practice](docs/INDEPENDENT_PRACTICE.md)
+[Download the workbook](deliverables/Export%20Consolidator.xlsx) · [Refresh guide](docs/REFRESH_GUIDE.md) · [Power Query source](power-query)
 
-![Native Excel summary from the documented sample refresh](evidence/native-summary.jpg)
+![Excel summary showing input, accepted, review, and skipped-record counts](evidence/native-summary.jpg)
 
-Use this macro-free workbook for the documented eight-field sales contract inside Excel Desktop. [Data Workbench](https://github.com/ZakJRademacher/data-workbench) is the separate configurable local CSV/XLSX application; it requires Python and does not replace this native Power Query skill example. [Verified compatibility and limits](https://github.com/ZakJRademacher/data-workbench/blob/main/docs/COMPARISON.md).
+## What the sample shows
 
-## What it delivers
+Five exports contain **309 records: 291 accepted, 10 needing correction, and eight skipped repeats**. Accepted sales total **57,507.7198 source monetary units**. The review table includes both the 10 correction records and eight skipped copies, with source filenames, record numbers, and reasons.
 
-- **Clean master:** validated unique records with source filename and record number.
-- **Needs review:** invalid values, conflicting IDs and skipped duplicate copies, with reasons and correction steps.
-- **Import history and summary:** file-level counts, totals and refresh status.
+The workbook keeps IDs as text, applies the configured date formats, and checks repeated Row IDs across files. Identical valid copies can be skipped; conflicting copies all go to review. It doesn't choose an amount just because it came from a newer file.
 
-The sample reconciles **309 input records = 291 accepted + 10 corrections + 8 skipped repeats** across five exports. Accepted sales total **57,507.7198 source monetary units**. The review table contains 18 rows, including both corrections and skipped copies.
+The sample uses a defined **eight-field sales format**. Other exports need agreed mappings and rules before they can use the same workflow. [Data contract](docs/DATA_CONTRACT.md).
 
-## Try the sample
+## Try it in Excel
 
 1. Download the repository using **Code > Download ZIP**, then extract it.
 2. Open the workbook in **Excel Desktop for Windows with Power Query**.
 3. On **Start here**, set **Folder** to the absolute path of the extracted `data/incoming` folder.
-4. Select **Data > Refresh All**, wait for completion, and check query errors and **Summary**.
+4. Select **Data > Refresh All**, wait for completion, and check every query and the **Summary** sheet.
 
-Routine refresh runs inside Excel. Correct the source CSVs before refreshing; output-table edits are regenerated. Keep the files that belong in the current master. Import history describes the current folder snapshot.
+Correct records in the source CSVs, then refresh again. Edits to output tables are replaced on refresh. Keep the input folder unchanged while queries run.
 
-## Evidence
+Each refresh rebuilds the master from the current folder. **Import history describes that folder snapshot**, rather than a permanent log of earlier refreshes. File errors need attention before the combined total can be treated as complete; a failed query can leave older saved values visible.
 
-Native Excel checks confirmed that adding a file changed accepted rows from **291 to 292**; an unchanged refresh kept those results. An unsupported filename appeared as a file issue, and removing the demonstration files restored the baseline.
+## What was checked
 
-[Native validation record](evidence/native-validation.json) · [Power Query source](power-query) · [Independent Python reference](src/consolidate.py) · [Tests](tests)
+A native Excel refresh matched the Python reference. Adding a compatible file changed accepted rows from **291 to 292**; refreshing unchanged inputs kept that result. An unsupported filename appeared as a file issue. Removing the test files restored the baseline.
 
-## Handoff and implementation
+[Native validation](evidence/native-validation.json) · [Python reference](src/consolidate.py) · [Tests](tests) · [Verification scope](docs/QA.md)
 
-- [Operating and reproduction detail](docs/PROJECT_GUIDE.md)
-- [Data contract and duplicate rules](docs/DATA_CONTRACT.md)
-- [Client handoff](docs/CLIENT_HANDOFF.md)
-- [Implementation and rebuild notes](docs/TECHNICAL.md)
-- [Validation scope](docs/QA.md) · [Sample provenance](docs/SAMPLE.md)
+## Documentation
 
-## Scope
+- [Operating guide](docs/PROJECT_GUIDE.md) · [Client handoff](docs/CLIENT_HANDOFF.md)
+- [Implementation and rebuild](docs/TECHNICAL.md) · [Sample provenance](docs/SAMPLE.md)
+- [Walkthrough](docs/PORTFOLIO.md) · [Practice exercise](docs/INDEPENDENT_PRACTICE.md)
 
-For configurable multi-table CSV/XLSX preparation, use [Data Workbench](https://github.com/ZakJRademacher/data-workbench). The [earlier local CSV workbench](https://github.com/ZakJRademacher/cloud-file-intake/blob/main/docs/WORKBENCH.md) remains preserved separately. This native Excel template retains its documented eight-field contract; no automatic handoff between different project schemas is implied.
+[Data Workbench](https://github.com/ZakJRademacher/data-workbench) is a separate local app for configurable CSV/XLSX preparation and related-table joins. This workbook remains the native Excel/Power Query option for its documented sales format. [Comparison and limits](https://github.com/ZakJRademacher/data-workbench/blob/main/docs/COMPARISON.md). The [earlier CSV workbench](https://github.com/ZakJRademacher/cloud-file-intake/blob/main/docs/WORKBENCH.md) is also preserved separately.
 
-Independent portfolio demonstration using historical Kaggle Superstore values with disclosed export variations and seeded defects. Client adaptation requires agreed mappings, formats, keys and validation rules. No client savings are claimed, and the source does not establish a currency.
-
-Code/documentation: [MIT](LICENSE). Dataset-derived files retain the source's GPL 2 label; see [data attribution](licenses/DATA.md).
+This independent project uses historical Kaggle Superstore values with disclosed export variations and deliberately introduced test defects. The source doesn't establish a currency. Code and documentation: [MIT](LICENSE). Dataset-derived files retain the source's GPL 2 label; see [data attribution](licenses/DATA.md).

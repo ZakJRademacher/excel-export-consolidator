@@ -2,7 +2,7 @@
 
 ## First setup
 
-Use Excel Desktop for Windows with Power Query. The workbook contains saved example results, so seeing numbers immediately after opening does not establish a successful refresh on your computer.
+Use Excel Desktop for Windows with Power Query. The workbook opens with saved sample results. Follow the setup below and check all query statuses to confirm that it has refreshed from your local folder.
 
 1. Extract the whole project ZIP to a normal local folder.
 2. Open `deliverables/Export Consolidator.xlsx`.

@@ -4,7 +4,7 @@
 
 `Start here settings + input CSV folder -> Consolidation -> CleanMaster / NeedsReview / ImportHistory -> Summary`
 
-Excel reads the ImportSettings, ColumnMapping, and FileFormats tables from the workbook. `Consolidation` is a connection-only M query returning a record containing classified rows and per-file counts. The three output queries select their respective tables and load into worksheets. Summary formulas read the loaded results.
+The workbook keeps its import configuration in three Excel tables: ImportSettings, ColumnMapping, and FileFormats. `Consolidation` is a connection-only M query returning a record containing classified rows and per-file counts. The three output queries select their respective tables and load into worksheets. Summary formulas read the loaded results.
 
 The M source is supplied in `power-query/` and also shown on the Query source worksheet. Changing a displayed source-code cell does not edit a native query. Use **Data > Queries & Connections > Edit > Advanced Editor** to change executable queries, and keep the supplied `.pq` files synchronized.
 
@@ -26,7 +26,7 @@ Known engine differences outside the demonstrated baseline:
 - The M query enforces duplicate-alias, supported-culture, and refresh-size guards. The reference expects the supplied valid configuration.
 - Power Query ignores Windows-hidden files; Python ignores the documented filename prefixes but does not inspect Windows hidden attributes.
 
-Do not claim arbitrary-input equivalence from matching the sample. Test any new client's actual exports in Excel.
+The matching sample establishes that case. For a new export, compare the actual files in Excel before relying on cross-engine agreement.
 
 ## Workbook authoring and rebuild
 

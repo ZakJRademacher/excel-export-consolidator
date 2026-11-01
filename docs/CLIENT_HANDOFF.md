@@ -2,7 +2,7 @@
 
 ## Before adapting this to business exports
 
-Obtain representative files from each export system and agree on:
+Start with representative exports from each source. Agree on the following before changing the workbook:
 
 1. What one record represents and the stable unique key. RowID in this sample identifies an order line, not an entire order.
 2. Required fields, acceptable aliases, missing-value rules, and allowed categories.
@@ -33,4 +33,4 @@ Save exports in the agreed folder, close them, Refresh All, check every query, r
 
 “I consolidate recurring CSV exports into a refreshable Excel master, standardize agreed fields, identify invalid and duplicate records, and provide a correction list, reconciliation totals, and written refresh instructions.”
 
-Quote work around the number of source formats, rule complexity, and validation effort. This example demonstrates an implementation; it does not establish a particular client's savings or guarantee compatibility with their software.
+Estimate the work from the number of source formats, the rules needed, and the checks required for a successful handoff. Test the recipient's files and Excel version before promising compatibility.
